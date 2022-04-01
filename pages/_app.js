@@ -1,15 +1,21 @@
-import "/styles/globals.css"
+import "../styles/globals.css";
+// now TAILWIND it is available in all components 
+// THIS IS THE WRAPPER OF OUR APPLICATION
 
-// December 11 2020 
+// December 11 2020
 // DEFAULT EXAMPLE  https://jools.dev/nextjs-_appjs-example  READ for more info
 
 const MyApp = ({ Component, pageProps }) => {
-    return <Component {...pageProps }
-    />
-}
-export default MyApp
+  return (
+    <div className="mx-auto pl-24 bg-green-500">  
+    {/* just centered title to make example  */}
+      <Component {...pageProps} />{" "}
+    </div>
+  );
+};
+export default MyApp;
 
-// OR 
+// OR
 
 // function MyApp({ Component, pageProps }) {
 //     return <Component {...pageProps} />
@@ -29,7 +35,7 @@ export default MyApp
 
 //   export default MyApp
 
-// ANOTHER NOTE WITH TYPSCRIPT SAME 
+// ANOTHER NOTE WITH TYPSCRIPT SAME
 
 //   The Component prop is the active page, so whenever you navigate between routes, Component will change to the new page. Therefore, any props you send to Component will be received by the page.
 
